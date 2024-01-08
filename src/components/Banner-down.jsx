@@ -27,10 +27,10 @@ const BannerDown = ({inView,  viewportWidth}) => {
                             <h3>10%OFF</h3>
                             </li>
                             <li>
-                            <h4>Use code 10FRIDAY at checkout</h4>
+                            <h4>Use code <span>10FRIDAY</span> at checkout</h4>
                             </li>
                             <li>
-                            <button className='banner-shop-button'>Shop now through Monday</button>
+                            <button className='banner-shop-button2'>Shop now{viewportWidth > 420 && ' through Monday'}</button>
                             </li>
                         </ul>
                         <button className='banner-close-button' onClick={() => handle()}>X</button>
