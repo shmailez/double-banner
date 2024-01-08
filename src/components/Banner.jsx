@@ -1,12 +1,14 @@
 import '../App.css';
 
-const Banner = () => {
+const Banner = ({refParam}) => {
+
+    console.log('ref1', refParam)
     return(
-        <div className="banner" id='upbanner'>
+        <div className="banner" id='upbanner'  ref={refParam}>
             <span className="banner-img"></span>
             <ul>
                 <li>
-                <h2>Black Friday, 24-27 Nov</h2>
+                <h2>Black Friday, 24-27 Nov Top div</h2>
                 </li>
                 <li>
                 <h3>10%OFF</h3>

@@ -1,8 +1,11 @@
 import '../App.css';
 
-const BannerDown = () => {
+const BannerDown = ({refParam, inView}) => {
+
+    console.log('ref2', refParam)
+    console.log('down', inView)
     return(
-        <div className="banner2" id='upbanner'>
+        <div className={inView ? "banner2-invis": "banner2"} id='upbanner' ref={refParam}>
             <span className="banner-img2"></span>
             <ul>
                 <li>
@@ -12,10 +15,10 @@ const BannerDown = () => {
                 <h3>10%OFF</h3>
                 </li>
                 <li>
-                <h4>Use Code 10FRIDAY</h4>
+                <h4>Use code 10FRIDAY at checkout</h4>
                 </li>
                 <li>
-                <button className='banner-shop-button'>Shop now</button>
+                <button className='banner-shop-button'>Shop now through Monday</button>
                 </li>
             </ul>
             <button className='banner-close-button'>X</button>
