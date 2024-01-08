@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../App.css';
 
-const BannerDown = ({inView}) => {
+const BannerDown = ({inView,  viewportWidth}) => {
 
     let visValue = JSON.parse(sessionStorage.getItem('vis'))
     if(visValue === null) {
@@ -15,15 +15,10 @@ const BannerDown = ({inView}) => {
         sessionStorage.setItem('vis', false);
     }
 
-    // if (!inView) {
-    //     inView = true
-    // }
-
-    // console.log('down', inView)
     return(
         <>
-            {vis && <div className={inView ? "banner2-invis": "banner2"} id='upbanner'>
-                        <span className="banner-img2"></span>
+            {vis && <div className={inView ? "banner2-invis": "banner2"}>
+                       {viewportWidth > 420 && <span className="banner-img2"></span>}
                         <ul>
                             <li>
                             <h2>Black Friday</h2>
