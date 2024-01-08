@@ -1,26 +1,22 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import './App.css';
-import Banner from './components/Banner';
+import BannerUp from './components/Banner-up';
 import BannerDown from './components/Banner-down';
 
 function App() {
 
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
+  const ref1 = useRef(false);
+  // const ref2 = useRef(null);
 
   const isInViewport1 = useIsInViewport(ref1);
-  console.log('isInViewport1: ', isInViewport1);
 
-  const isInViewport2 = useIsInViewport(ref2);
-  console.log('isInViewport2: ', isInViewport2);
-
-  console.log('appref1', ref1)
+  // const isInViewport2 = useIsInViewport(ref2);
 
   return (
     <div className="App">
       
-      <Banner refParam={ref1}/>
-      <BannerDown refParam={ref2} inView={isInViewport1}/>
+      <BannerUp refParam={ref1}/>
+      <BannerDown inView={isInViewport1}/>
       
     </div>
   );

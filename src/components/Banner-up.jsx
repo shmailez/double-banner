@@ -2,7 +2,6 @@ import '../App.css';
 
 const Banner = ({refParam}) => {
 
-    console.log('ref1', refParam)
     return(
         <div className="banner" id='upbanner'  ref={refParam}>
             <span className="banner-img"></span>
