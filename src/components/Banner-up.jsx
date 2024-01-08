@@ -13,7 +13,7 @@ const BannerUp = ({refParam, viewportWidth}) => {
                 <h3>10%OFF</h3>
                 </li>
                 <li>
-                <h4>Use code 10FRIDAY{viewportWidth > 910 && ' at checkout'}</h4>
+                <h4>Use code <span>10FRIDAY</span>{viewportWidth > 910 && ' at checkout'}</h4>
                 </li>
                 <li>
                 <button className='banner-shop-button'>Shop now</button>

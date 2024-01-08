@@ -47,8 +47,11 @@
   -moz-text-fill-color: transparent;
 }
 
+.banner h4 span {
+  color: #D7A830
+}
+
 .banner-mobile {
- 
   background-color: #000000;
   position: absolute;
   top: 54px;
@@ -67,7 +70,6 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  /* min-width: 500px; */
   padding: 0;
 }
 
@@ -77,6 +79,11 @@
 
 .banner-mobile h2{
   font-size: 16px;
+}
+
+.banner-mobile h3{
+  font-size: 16px;
+  color: #D7A830
 }
 
 .banner-img {
@@ -101,7 +108,7 @@
 
 .banner-shop-button {
   border-radius: 24px; 
-  padding: 14px
+  padding: 10px
 }
 
 /**/
@@ -232,5 +239,20 @@
     background-repeat: no-repeat;
   }
 
+  .banner2 h4 {
+    font-size: 16px;
+    color:inherit
+  }
+}
+
+@media (max-width: 470px) {
+
+  .banner-mobile ul li {
+    margin: 2px;
+}
+
+  .banner-mobile h3{
+    font-size: 0
+  }
 }
 
